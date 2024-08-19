@@ -1,0 +1,132 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    color: rgb(255, 255, 255);
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+    width: 100vw;
+    background-image: linear-gradient(to left bottom, #000000, #0d0d0d, #161616, #1d1d1d, #252525);
+}
+
+section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 70vw;
+    margin-top: 20px;
+    gap: 10px;
+}
+
+#header {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-bottom: 15px;
+    cursor: pointer;
+}
+
+h1 {
+    display: flex;
+    justify-content: center;
+    font-size: 45px;
+}
+
+h1:first-child {
+    margin-right: 20px;
+}
+
+h1:last-child {
+    color: rgb(255, 0, 0);
+}
+
+#input {
+    width: 100%;
+    font-size: 18px;
+    padding: 5px;
+    padding-left: 7px;
+    padding-right: 7px;
+    border: 1px solid rgb(255, 255, 255);
+    border-radius: 3px;
+}
+
+#send {
+    width: fit-content;
+    font-size: 16px;
+    color: #000000;
+    padding: 5px;
+    padding-left: 7px;
+    padding-right: 7px;
+    background-image: linear-gradient(to right top, #cccccc, #d9d9d9, #e5e5e5, #f2f2f2, #ffffff);
+    border: none;
+    border-radius: 3px;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+
+#allData {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 10px;
+}
+
+.buttons {
+    display: flex;
+    width: 100%;
+}
+
+.buttons * {
+    font-size: 15px;
+    padding: 3px;
+    padding-left: 10px;
+    padding-right: 10px;
+    border: none;
+    border-radius: 1px;
+    cursor: pointer;
+}
+
+.delete {
+    background-color: rgb(255, 0, 0);
+}
+
+.update {
+    color: #000000;
+    background-image: linear-gradient(to right top, #cccccc, #d9d9d9, #e5e5e5, #f2f2f2, #ffffff);
+}
+
+.getText {
+    display: flex;
+    width: 100%;
+    font-size: 18px;
+    padding: 5px;
+    padding-left: 7px;
+    padding-right: 7px;
+    border: 1px dashed rgb(255, 255, 255);
+    border-radius: 3px;
+    overflow-x: hidden;
+}
+
+@media (max-width: 1024px) {
+    .buttons * {
+        padding: 5px;
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+}
+
+@media (max-width: 800px) {
+    section {
+        width: 90vw;
+    }
+}
+
+@media (max-width: 600px) {
+    h1 {
+        font-size: 38px;
+    }
+}
