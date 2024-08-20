@@ -21,6 +21,24 @@ function sendData() {
     dataShow.appendChild(span);
 
     document.getElementById("allData").appendChild(dataShow);
+
+    $.ajax({
+        type: "POST",
+        url: "https://nodetest-ybpt.onrender.com/",
+        headers: {
+            "Content-Type": "application/json",
+            "Accept": "application/json",
+        },
+        data: JSON.stringify({ control: "teste", name: "teste", description: document.getElementById("input").value }),
+        success: () => {
+            document.getElementById("input").value = "";
+            window.alert("Data sent successfully");
+        },
+        error: function(textStatus, errorThrown) {
+            console.error("Error:", textStatus, errorThrown);
+            window.alert("Error sending data");
+        }
+    });
 }
 
 document.getElementById("send").addEventListener("click", () => {
