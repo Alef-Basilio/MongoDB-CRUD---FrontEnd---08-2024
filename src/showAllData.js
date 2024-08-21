@@ -13,7 +13,7 @@ function showAllData() {
 
     $.ajax({
         type: "GET",
-        url: "https://nodetest-ybpt.onrender.com/",
+        url: "https://nodeback-4zha.onrender.com/",
         Headers: {
             "Content-Type": "application/json",
             "Accept": "application/json"
@@ -27,7 +27,7 @@ function showAllData() {
                     const deleteBtn = document.createElement("button");
                     const span = document.createElement("span");
             
-                    dataShow.setAttribute("class", "dataShow");
+                    dataShow.setAttribute("class", response[i]._id);
                     div.setAttribute("class", "buttons");
                     updateBtn.setAttribute("class", "update");
                     deleteBtn.setAttribute("class", "delete");
@@ -36,7 +36,7 @@ function showAllData() {
                     updateBtn.innerHTML = "U";
                     deleteBtn.innerHTML = "D";
             
-                    span.innerHTML = response[i].description;
+                    span.innerHTML = response[i].text;
 
                     div.appendChild(updateBtn);
                     div.appendChild(deleteBtn);
@@ -52,4 +52,5 @@ function showAllData() {
     });
 }
 
+showAllData();
 setInterval(showAllData, 1000);

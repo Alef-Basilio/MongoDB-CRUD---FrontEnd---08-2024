@@ -1,20 +1,21 @@
 function deleteData() {
-    const deletes = document.getElementsByClassName("delete");
-    var description = "";
-    for (let i = 0; i < deletes.length; i++) {
-        deletes[i].addEventListener("click", (e) => {
+    const deletesBtn = document.getElementsByClassName("delete");
+
+    for (let i = 0; i < deletesBtn.length; i++) {
+        deletesBtn[i].addEventListener("click", (e) => {
             const target = e.currentTarget;
-            description = target.parentNode.parentNode.children[1].textContent;
-            target.parentNode.parentNode.remove();
+            const id = target.parentNode.parentNode.className;
+            console.log(id);
 
             $.ajax({
                 type: "DELETE",
-                url: "https://nodetest-ybpt.onrender.com/" + description,
+                url: "https://nodeback-4zha.onrender.com/" + id,
                 headers: {
                     "Content-Type": "application/json",
                     "Accept": "application/json"
                 },
                 success: function(response) {
+                    target.parentNode.parentNode.remove();
                     console.log("Record deleted successfully:", response);
                 },
                 error: function(textStatus, errorThrown) {

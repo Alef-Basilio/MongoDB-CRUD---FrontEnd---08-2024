@@ -1,29 +1,30 @@
-import data from "./apiData.js";
-
 function updateData() {
-    const updates = document.getElementsByClassName("update");
-    for (let i = 0; i < updates.length; i++) {
-        updates[i].addEventListener("click", (e) => {
+    const updatesBtn = document.getElementsByClassName("update");
+
+    for (let i = 0; i < updatesBtn.length; i++) {
+        updatesBtn[i].addEventListener("click", (e) => {
             const target = e.currentTarget;
-            const getData = data;
+            const id = target.parentNode.parentNode.className;
+            console.log(id);
     
             $.ajax({
                 type: "PUT",
-                url: "https://nodetest-ybpt.onrender.com/" + target.parentNode.parentNode.children[1].textContent,
+                url: "https://nodeback-4zha.onrender.com/" + id,
+                crossDomain: true,
                 headers: {
                     "Content-Type": "application/json",
-                    "Accept": "application/json"
+                    "Accept": "*/*",
+                    "Access-Control-Allow-Origin": "*",
                 },
-                data: { control: "teste", name: "teste", description: getData[0].description },
+                data: JSON.stringify({ text: "Updated!" }),
                 success: function(response) {
+                    target.parentNode.parentNode.children[1].innerHTML = "Updated!";
                     console.log("Record updated successfully:", response);
                 },
                 error: function(textStatus, errorThrown) {
                     console.error("Error:", textStatus, errorThrown);
                 }
             });
-
-            target.parentNode.parentNode.children[1].innerHTML = getData[0].description;
         });
     }
 }

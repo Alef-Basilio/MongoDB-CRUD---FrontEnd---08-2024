@@ -3,7 +3,7 @@ var data = [];
 function teste() {
         $.ajax({
             type: "GET",
-            url: "https://nodetest-ybpt.onrender.com/",
+            url: "https://nodeback-4zha.onrender.com/",
             Headers: {
                 "Content-Type": "application/json",
                 "Accept": "application/json"

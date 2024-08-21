@@ -1,11 +1,31 @@
 function sendData() {
+    $.ajax({
+        type: "POST",
+        url: "https://nodeback-4zha.onrender.com/",
+        headers: {
+            "Content-Type": "application/json",
+            "Accept": "application/json",
+        },
+        data: JSON.stringify({ text: document.getElementById("input").value }),
+        success: () => {
+            createDataShow();
+            document.getElementById("input").value = "";
+            window.alert("Data sent successfully");
+        },
+        error: function(textStatus, errorThrown) {
+            console.error("Error:", textStatus, errorThrown);
+            window.alert("Error sending data");
+        }
+    });
+}
+
+function createDataShow() {
     const dataShow = document.createElement("div");
     const div = document.createElement("div");
     const updateBtn = document.createElement("button");
     const deleteBtn = document.createElement("button");
     const span = document.createElement("span");
 
-    dataShow.setAttribute("class", "dataShow");
     div.setAttribute("class", "buttons");
     updateBtn.setAttribute("class", "update");
     deleteBtn.setAttribute("class", "delete");
@@ -20,23 +40,20 @@ function sendData() {
     dataShow.appendChild(div);
     dataShow.appendChild(span);
 
-    document.getElementById("allData").appendChild(dataShow);
-
     $.ajax({
-        type: "POST",
-        url: "https://nodetest-ybpt.onrender.com/",
-        headers: {
+        type: "GET",
+        url: "https://nodeback-4zha.onrender.com/",
+        Headers: {
             "Content-Type": "application/json",
-            "Accept": "application/json",
+            "Accept": "application/json"
         },
-        data: JSON.stringify({ control: "teste", name: "teste", description: document.getElementById("input").value }),
-        success: () => {
-            document.getElementById("input").value = "";
-            window.alert("Data sent successfully");
+        success: function(response) {
+            console.log(response[response.length - 1]._id);
+            dataShow.setAttribute("class", response[response.length - 1]._id);
+            document.getElementById("allData").appendChild(dataShow);
         },
         error: function(textStatus, errorThrown) {
             console.error("Error:", textStatus, errorThrown);
-            window.alert("Error sending data");
         }
     });
 }
