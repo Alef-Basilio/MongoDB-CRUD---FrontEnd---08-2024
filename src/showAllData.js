@@ -53,4 +53,4 @@ function showAllData() {
 }
 
 showAllData();
-setInterval(showAllData, 1000);
+setInterval(showAllData, 2000);
