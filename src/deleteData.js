@@ -1,11 +1,10 @@
 function deleteData() {
-    const deletesBtn = document.getElementsByClassName("delete");
+    const deleteBtns = document.getElementsByClassName("delete");
 
-    for (let i = 0; i < deletesBtn.length; i++) {
-        deletesBtn[i].addEventListener("click", (e) => {
+    for (let i = 0; i < deleteBtns.length; i++) {
+        deleteBtns[i].addEventListener("click", (e) => {
             const target = e.currentTarget;
-            const id = target.parentNode.parentNode.className;
-            console.log(id);
+            const id = target.parentNode.parentNode.id;
 
             $.ajax({
                 type: "DELETE",

@@ -48,8 +48,7 @@ function createDataShow() {
             "Accept": "application/json"
         },
         success: function(response) {
-            console.log(response[response.length - 1]._id);
-            dataShow.setAttribute("class", response[response.length - 1]._id);
+            dataShow.setAttribute("id", response[response.length - 1]._id);
             document.getElementById("allData").appendChild(dataShow);
         },
         error: function(textStatus, errorThrown) {

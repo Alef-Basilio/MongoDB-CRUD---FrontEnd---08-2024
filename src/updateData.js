@@ -1,11 +1,10 @@
 function updateData() {
-    const updatesBtn = document.getElementsByClassName("update");
+    const updateBtns = document.getElementsByClassName("update");
 
-    for (let i = 0; i < updatesBtn.length; i++) {
-        updatesBtn[i].addEventListener("click", (e) => {
+    for (let i = 0; i < updateBtns.length; i++) {
+        updateBtns[i].addEventListener("click", (e) => {
             const target = e.currentTarget;
-            const id = target.parentNode.parentNode.className;
-            console.log(id);
+            const id = target.parentNode.parentNode.id;
     
             $.ajax({
                 type: "PUT",

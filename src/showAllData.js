@@ -27,7 +27,7 @@ function showAllData() {
                     const deleteBtn = document.createElement("button");
                     const span = document.createElement("span");
             
-                    dataShow.setAttribute("class", response[i]._id);
+                    dataShow.setAttribute("id", response[i]._id);
                     div.setAttribute("class", "buttons");
                     updateBtn.setAttribute("class", "update");
                     deleteBtn.setAttribute("class", "delete");
