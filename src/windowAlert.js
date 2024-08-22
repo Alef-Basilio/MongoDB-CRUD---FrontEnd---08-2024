@@ -2,9 +2,9 @@ const alertContent = "If this is your first access of the day, it may take a few
 const today = new Date().getDate();
 const thisMonth = new Date().getMonth() + 1;
 const thisYear = new Date().getFullYear();
-var controller = localStorage.getItem("controller") ? localStorage.getItem("controller") : 1;
+var controller = localStorage.getItem("controller") != null ? localStorage.getItem("controller") : 1;
 
-if (localStorage.getItem("controller") == 1) {
+if (controller == 1) {
     window.alert(alertContent);
     localStorage.setItem("day", today);
     localStorage.setItem("month", thisMonth);
