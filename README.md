@@ -35,7 +35,7 @@ Topics:
 
 
 <h2 id="tech" align="center">Technologies</h2>
-JavaScript and Jquery.
+Jquery and JavaScript.
 
 ### API:
 Alef-Basilio/MongoDB-API---BackEnd---08-2024.
