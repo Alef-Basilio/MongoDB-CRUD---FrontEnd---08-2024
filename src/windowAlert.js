@@ -11,11 +11,14 @@ if (controller == 1) {
     localStorage.setItem("year", thisYear);
     localStorage.setItem("controller", 0);
 } else if (localStorage.getItem("day") != today) {
+    localStorage.setItem("day", today);
     window.alert(alertContent);
 } else if (localStorage.getItem("month") != thisMonth) {
+    localStorage.setItem("month", thisMonth);
     window.alert(alertContent);
     localStorage.setItem("month", thisMonth);
 } else if (localStorage.getItem("year") != thisYear) {
     window.alert(alertContent);
+    localStorage.setItem("year", thisYear);
     localStorage.setItem("year", thisYear);
 }
