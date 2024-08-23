@@ -13,7 +13,7 @@ https://nodeback-4zha.onrender.com
 ```
 
 
-<h1 align="center" style="color: #805ad5; font-weight: bold;">MongoDB API</h1>
+<h1 align="center" style="color: #805ad5; font-weight: bold;">MongoDB CRUD</h1>
 <p align="center">
 Topics: 
 <a href="#tech">Technolgies</a> |
@@ -35,10 +35,10 @@ Topics:
 
 
 <h2 id="tech" align="center">Technologies</h2>
-Node.js, JS and Jquery.
+JS and Jquery.
 
-### DATABASE:
-MongoDB.
+### API:
+Alef-Basilio/MongoDB-API---BackEnd---08-2024.
 
 
 <h2 id="how" align="center">How was made</h2>
