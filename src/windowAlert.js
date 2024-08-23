@@ -16,9 +16,7 @@ if (controller == 1) {
 } else if (localStorage.getItem("month") != thisMonth) {
     localStorage.setItem("month", thisMonth);
     window.alert(alertContent);
-    localStorage.setItem("month", thisMonth);
 } else if (localStorage.getItem("year") != thisYear) {
+    localStorage.setItem("year", thisYear);
     window.alert(alertContent);
-    localStorage.setItem("year", thisYear);
-    localStorage.setItem("year", thisYear);
 }
