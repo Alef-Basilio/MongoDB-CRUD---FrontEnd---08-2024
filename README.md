@@ -1,17 +1,25 @@
-<h2 align="center">Deploy link:</h2>
-
-The MongoDB API repository: [Alef-Basilio/MongoDB-API---BackEnd---08-2024](https://github.com/Alef-Basilio/MongoDB-API---BackEnd---08-2024)
+<h2 align="center">How to access the deploy running the backend:</h2>
+First access the API so that the Render site can "activate" the backend:
 </br>
 
-If you want to test: [MongoDB CRUD](https://mongodbcrud-backend-f8fole6uw-alef-basilios-projects.vercel.app/) or just see (this one takes a few minutes to work):
-[MongoDB API](https://nodeback-4zha.onrender.com)
+@[MongoDB API](https://nodeback-4zha.onrender.com)
+
+```
+https://nodeback-4zha.onrender.com
+```
+If this is your first API access of the day, this may take several minutes.
+</br>
+
+Once you can access the JSON from the backend above, access the frontend next:
+</br>
+
+@[MongoDB CRUD](https://mongodbcrud-backend-f8fole6uw-alef-basilios-projects.vercel.app/)
 
 ```
 https://mongodbcrud-backend-f8fole6uw-alef-basilios-projects.vercel.app/
 ```
-```
-https://nodeback-4zha.onrender.com
-```
+
+The back-end GitHub repository: [MongoDB CRUD](https://mongodbcrud-backend-f8fole6uw-alef-basilios-projects.vercel.app/)
 
 
 <h1 align="center" style="color: #805ad5; font-weight: bold;">MongoDB CRUD</h1>
