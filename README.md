@@ -22,7 +22,7 @@ https://mongodbcrud-backend-f8fole6uw-alef-basilios-projects.vercel.app/
 The back-end GitHub repository: [MongoDB API](https://github.com/Alef-Basilio/MongoDB-API---BackEnd---08-2024)
 
 
-<h1 align="center" style="color: #805ad5; font-weight: bold;">MongoDB CRUD</h1>
+<h1 align="center" style="font-weight: bold;">MongoDB CRUD</h1>
 <p align="center">
 Topics: 
 <a href="#tech">Technolgies</a> |
